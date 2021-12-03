@@ -1,11 +1,9 @@
-load("@rules_cc//cc:defs.bzl", "cc_binary")
-
-cc_binary(
+sh_binary(
     name = "part-1",
-    srcs = ["part-1.cc"],
+    srcs = ["part-1.sh"],
 )
 
-cc_binary(
+sh_binary(
     name = "part-2",
-    srcs = ["part-2.cc"],
+    srcs = ["part-2.sh"],
 )
