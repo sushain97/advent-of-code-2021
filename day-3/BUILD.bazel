@@ -1,0 +1,11 @@
+java_binary(
+    name = "part-1",
+    main_class = "Part1",
+    srcs = glob(["Part1.java"]),
+)
+
+java_binary(
+    name = "part-2",
+    main_class = "Part2",
+    srcs = glob(["Part2.java"]),
+)
