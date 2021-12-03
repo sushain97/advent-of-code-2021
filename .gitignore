@@ -1,5 +1,5 @@
 /bazel-bin
 /bazel-out
 /bazel-testlogs
-/bazel-advent-of-code
+/bazel-advent-of-code-2021
 /.vscode
