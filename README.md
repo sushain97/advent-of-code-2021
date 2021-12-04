@@ -7,4 +7,4 @@ build toolchain.
 
 - Day 1: [AWK](https://en.wikipedia.org/wiki/AWK)
 - Day 2: [sh](https://en.wikipedia.org/wiki/Bourne_shell)
-- Day 3: [Java][https://en.wikipedia.org/wiki/java_(programming_language)]
+- Day 3: [Perl](https://en.wikipedia.org/wiki/Perl)
