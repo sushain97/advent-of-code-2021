@@ -9,3 +9,4 @@ build toolchain.
 - Day 2: [sh](https://en.wikipedia.org/wiki/Bourne_shell)
 - Day 3: [Perl](https://en.wikipedia.org/wiki/Perl)
 - Day 4: [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>)
+- Day 5: [C++](https://en.wikipedia.org/wiki/C%2B%2B)
