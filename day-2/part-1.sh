@@ -3,7 +3,7 @@ set -eu
 
 horiz=depth=0
 
-while read -r line; do    
+while read -r line; do
   IFS=' '; set -- $line; unset IFS
   case $1 in
     'forward') horiz=$((horiz + $2)) ;;
