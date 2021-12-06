@@ -12,3 +12,13 @@ load("@rules_perl//perl:deps.bzl", "perl_register_toolchains", "perl_rules_depen
 perl_rules_dependencies()
 
 perl_register_toolchains()
+
+http_archive(
+    name = "rules_dart",
+    urls = ["https://github.com/cbracken/rules_dart/archive/refs/tags/2.13.1.tar.gz"],
+    strip_prefix = "rules_dart-2.13.1",
+    sha256 = "6112595be3d626aef509a85ef96aece90e8ee09fb224172faaec599228d83b3e",
+)
+load("@rules_dart//dart/build_rules:repositories.bzl", "dart_repositories")
+
+dart_repositories()

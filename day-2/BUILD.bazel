@@ -1,9 +1,13 @@
-sh_binary(
+load("@rules_dart//dart/build_rules:vm.bzl", "dart_vm_binary")
+
+dart_vm_binary(
     name = "part-1",
-    srcs = ["part-1.sh"],
+    script_file = "part-1.dart",
+    srcs = ["part-1.dart"],
 )
 
-sh_binary(
+dart_vm_binary(
     name = "part-2",
-    srcs = ["part-2.sh"],
+    script_file = "part-2.dart",
+    srcs = ["part-2.dart"],
 )
