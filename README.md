@@ -11,3 +11,4 @@ build toolchain.
 - Day 4: [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>)
 - Day 5: [C++](https://en.wikipedia.org/wiki/C%2B%2B)
 - Day 6: [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>)
+- Day 7: [JavaScript](https://en.wikipedia.org/wiki/JavaScript)

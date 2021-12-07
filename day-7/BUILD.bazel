@@ -1,0 +1,11 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+
+nodejs_binary(
+    name = "part-1",
+    entry_point = ":part-1.js",
+)
+
+nodejs_binary(
+    name = "part-2",
+    entry_point = ":part-2.js",
+)
