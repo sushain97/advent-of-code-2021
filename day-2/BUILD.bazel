@@ -1,13 +1,20 @@
 load("@rules_dart//dart/build_rules:vm.bzl", "dart_vm_binary")
 
-dart_vm_binary(
+INPUT = "large.input"
+DATA = ["small.input", "large.input"]
+
+genrule(
     name = "part-1",
-    script_file = "part-1.dart",
-    srcs = ["part-1.dart"],
+    srcs = ["part-1.sql"] + DATA,
+    outs = ["part-1.output"],
+    cmd = "cp $(location {}) input && $(location @sqlite3//:sqlite3) < $(location part-1.sql) | tee $@".format(INPUT),
+    tools = ["@sqlite3//:sqlite3"],
 )
 
-dart_vm_binary(
+genrule(
     name = "part-2",
-    script_file = "part-2.dart",
-    srcs = ["part-2.dart"],
+    srcs = ["part-2.sql"] + DATA,
+    outs = ["part-2.output"],
+    cmd = "cp $(location {}) input && $(location @sqlite3//:sqlite3) < $(location part-2.sql) | tee $@".format(INPUT),
+    tools = ["@sqlite3//:sqlite3"],
 )
