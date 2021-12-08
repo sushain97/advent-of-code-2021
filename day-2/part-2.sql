@@ -1,11 +1,11 @@
-CREATE TABLE input (txt TEXT);
+CREATE TABLE input (txt TEXT) STRICT;
 
 INSERT INTO
   input
 VALUES
-  (readfile('input'));
+  (CAST(readfile('input') AS TEXT));
 
-CREATE TABLE movements (dir TEXT, units INT);
+CREATE TABLE movements (dir TEXT, units INT) STRICT;
 
 WITH RECURSIVE data_builder (dir, units, rest) AS (
   SELECT
@@ -17,18 +17,14 @@ WITH RECURSIVE data_builder (dir, units, rest) AS (
   UNION
   ALL
   SELECT
-    CAST(
-      SUBSTR(
-        SUBSTR(rest, 0, INSTR(rest, char(10))),
-        0,
-        INSTR(rest, ' ')
-      ) AS TEXT
+    SUBSTR(
+      SUBSTR(rest, 0, INSTR(rest, char(10))),
+      0,
+      INSTR(rest, ' ')
     ),
-    CAST(
-      SUBSTR(
-        SUBSTR(rest, 0, INSTR(rest, char(10))),
-        INSTR(rest, ' ') + 1
-      ) AS INT
+    SUBSTR(
+      SUBSTR(rest, 0, INSTR(rest, char(10))),
+      INSTR(rest, ' ') + 1
     ),
     SUBSTR(rest, INSTR(rest, char(10)) + 1)
   FROM
@@ -46,7 +42,7 @@ FROM
 WHERE
   dir != '';
 
-CREATE TABLE position (horiz INT, depth INT);
+CREATE TABLE position (horiz INT, depth INT) STRICT;
 
 WITH RECURSIVE walker (horiz, depth, aim, n) AS (
   SELECT
