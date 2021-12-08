@@ -12,6 +12,7 @@ build toolchain.
 - Day 5: [C](<https://en.wikipedia.org/wiki/C_(programming_language)>)
 - Day 6: [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>)
 - Day 7: [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- Day 8: [Dart](<https://en.wikipedia.org/wiki/Dart_(programming_language)>)
 
 Languages remaining:
 
@@ -21,4 +22,3 @@ Languages remaining:
 4. Python
 5. Ruby
 6. Go
-7. Dart

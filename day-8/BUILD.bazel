@@ -1,0 +1,13 @@
+load("@rules_dart//dart/build_rules:vm.bzl", "dart_vm_binary")
+
+dart_vm_binary(
+    name = "part-1",
+    script_file = "part-1.dart",
+    srcs = ["part-1.dart"],
+)
+
+dart_vm_binary(
+    name = "part-2",
+    script_file = "part-2.dart",
+    srcs = ["part-2.dart"],
+)
