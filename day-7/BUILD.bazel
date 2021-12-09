@@ -1,11 +1,13 @@
-load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+load("@rules_d//d:d.bzl", "d_binary")
 
-nodejs_binary(
+d_binary(
     name = "part-1",
-    entry_point = ":part-1.js",
+    srcs = ["part-1.d"],
 )
 
-nodejs_binary(
+load("@rules_d//d:d.bzl", "d_binary")
+
+d_binary(
     name = "part-2",
-    entry_point = ":part-2.js",
+    srcs = ["part-2.d"],
 )

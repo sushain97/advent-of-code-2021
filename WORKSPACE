@@ -40,3 +40,21 @@ http_archive(
     strip_prefix = "sqlite-amalgamation-3370000",
     build_file_content = "cc_binary(name = 'sqlite3', srcs = ['shell.c', 'sqlite3.c', 'sqlite3.h'], visibility = ['//visibility:public'])",
 )
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "rules_d",
+    urls = ["https://github.com/bazelbuild/rules_d/archive/bcf137e3c9381545ce54715632bc1d31c51ee4da.tar.gz"],
+    sha256 = "a32847bf2ae634563dece49c4dc8353956b64ba5c2d01ce811ea243e1a21b5b7",
+    strip_prefix = "rules_d-bcf137e3c9381545ce54715632bc1d31c51ee4da",
+)
+
+load("@rules_d//d:d.bzl", "DMD_BUILD_FILE")
+
+http_archive(
+    name = "dmd_darwin_x86_64",
+    urls = ["https://downloads.dlang.org/releases/2021/dmd.2.098.0.osx.tar.xz"],
+    sha256 = "7780aad4429d499a647e7e907706f775656be77f4425c8b4aeab798024c7f342",
+    build_file_content = DMD_BUILD_FILE,
+)
