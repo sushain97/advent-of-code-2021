@@ -13,12 +13,12 @@ build toolchain.
 - Day 6: [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>)
 - Day 7: [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - Day 8: [Dart](<https://en.wikipedia.org/wiki/Dart_(programming_language)>)
+- Day 9: [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>>)
 
 Languages remaining:
 
 1. Rust
-2. C++
-3. Scala
-4. Python
-5. Ruby
-6. Go
+1. C++
+1. Scala
+1. Ruby
+1. Go

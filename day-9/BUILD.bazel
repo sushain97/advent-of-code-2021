@@ -1,0 +1,9 @@
+py_binary(
+    name = "part-1",
+    srcs = ["part-1.py"],
+)
+
+py_binary(
+    name = "part-2",
+    srcs = ["part-2.py"],
+)
