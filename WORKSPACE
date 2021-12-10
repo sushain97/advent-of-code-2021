@@ -58,3 +58,18 @@ http_archive(
     sha256 = "7780aad4429d499a647e7e907706f775656be77f4425c8b4aeab798024c7f342",
     build_file_content = DMD_BUILD_FILE,
 )
+
+http_archive(
+    name = "io_bazel_rules_dotnet",
+    urls = ["https://github.com/bazelbuild/rules_dotnet/archive/02d7f4fbfa05ce2a8651a29dba7be997555e3642.tar.gz"],
+    sha256 = "41cf8febab49f80210a4adb7caab5ffa6572925955f3acfea1271fff09f9541e",
+    strip_prefix = "rules_dotnet-02d7f4fbfa05ce2a8651a29dba7be997555e3642",
+)
+
+load("@io_bazel_rules_dotnet//dotnet:deps.bzl", "dotnet_repositories")
+
+dotnet_repositories()
+
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "dotnet_register_toolchains")
+
+dotnet_register_toolchains()

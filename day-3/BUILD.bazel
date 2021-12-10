@@ -9,3 +9,17 @@ perl_binary(
     name = "part-2",
     srcs = ["part-2.pl"]
 )
+
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "fsharp_binary")
+
+fsharp_binary(
+    name = "part-1.exe",
+    srcs = ["part-1.fs"],
+    deps = ["@core_sdk_stdlib//:libraryset"],
+)
+
+fsharp_binary(
+    name = "part-2.exe",
+    srcs = ["part-2.fs"],
+    deps = ["@core_sdk_stdlib//:libraryset"],
+)
