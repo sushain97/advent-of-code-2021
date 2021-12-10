@@ -5,12 +5,12 @@ let main argv =
   let numbers = System.IO.File.ReadLines(argv.[0]) |> Array.ofSeq
 
   let gamma = (
-    (seq {0..(numbers.[0].Length - 1)})
-      |> Seq.map (fun i ->
+    [0..(numbers.[0].Length - 1)]
+      |> List.map (fun i ->
         let count = numbers |> Array.filter (fun n -> n.[i] = '0') |> Array.length
         if count > numbers.Length / 2 then '0' else '1'
       )
-      |> Array.ofSeq
+      |> Array.ofList
       |> System.String
   )
 
