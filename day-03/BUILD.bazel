@@ -1,15 +1,3 @@
-load("@rules_perl//perl:perl.bzl", "perl_binary")
-
-perl_binary(
-    name = "part-1",
-    srcs = ["part-1.pl"]
-)
-
-perl_binary(
-    name = "part-2",
-    srcs = ["part-2.pl"]
-)
-
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "fsharp_binary")
 
 fsharp_binary(
