@@ -1,5 +1,3 @@
-load("@rules_dart//dart/build_rules:vm.bzl", "dart_vm_binary")
-
 INPUT = "large.input"
 DATA = ["small.input", "large.input"]
 

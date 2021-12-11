@@ -1,9 +1,15 @@
-sh_binary(
+load("//:rules.bzl", "gen_binary")
+
+gen_binary(
     name = "part-1",
-    srcs = ["part-1.awk"],
+    tool = "@j_software//:bin/jconsole",
+    srcs = ["part-1.ijs"],
+    args = ["$(location part-1.ijs)"],
 )
 
-sh_binary(
+gen_binary(
     name = "part-2",
-    srcs = ["part-2.awk"],
+    tool = "@j_software//:bin/jconsole",
+    srcs = ["part-2.ijs"],
+    args = ["$(location part-2.ijs)"],
 )

@@ -73,3 +73,11 @@ dotnet_repositories()
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "dotnet_register_toolchains")
 
 dotnet_register_toolchains()
+
+http_archive(
+    name = "j_software",
+    urls = ["https://www.jsoftware.com/download/j902/install/j902_mac64.zip"],
+    sha256 = "c65f39a68c98132fd2ffd44491a10448e590fc9ea92299176bfde68d735eff41",
+    strip_prefix = "j902",
+    build_file_content = "exports_files(['bin/jconsole'])",
+)

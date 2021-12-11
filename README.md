@@ -5,7 +5,7 @@ https://adventofcode.com/
 Each day's solutions are in a different language, always using Bazel as the
 build toolchain.
 
-- Day 1: [AWK](https://en.wikipedia.org/wiki/AWK)
+- Day 1: [J](<https://en.wikipedia.org/wiki/J_(programming_language)>)
 - Day 2: [SQL](https://en.wikipedia.org/wiki/SQL)
 - Day 3: [F#](<https://en.wikipedia.org/wiki/FSharp_(programming_language)>)
 - Day 4: [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>)
@@ -24,3 +24,4 @@ Languages remaining:
 1. Ruby
 1. Go
 1. JavaScript
+1. AWK
