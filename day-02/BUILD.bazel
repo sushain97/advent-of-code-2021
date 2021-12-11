@@ -1,18 +1,19 @@
-INPUT = "large.input"
-DATA = ["small.input", "large.input"]
+load("//:rules.bzl", "gen_binary")
 
-genrule(
+SETUP = 'cp "${@: -1}" input; set -- "${@:1:$(($#-1))}"'
+
+gen_binary(
     name = "part-1",
-    srcs = ["part-1.sql"] + DATA,
-    outs = ["part-1.output"],
-    cmd = "cp $(location {}) input && $(location @sqlite3//:sqlite3) < $(location part-1.sql) | tee $@".format(INPUT),
-    tools = ["@sqlite3//:sqlite3"],
+    srcs = ["part-1.sql"],
+    setup_cmd = SETUP,
+    tool_args = ["<", "$(location part-1.sql)"],
+    tool = "@sqlite3//:sqlite3",
 )
 
-genrule(
+gen_binary(
     name = "part-2",
-    srcs = ["part-2.sql"] + DATA,
-    outs = ["part-2.output"],
-    cmd = "cp $(location {}) input && $(location @sqlite3//:sqlite3) < $(location part-2.sql) | tee $@".format(INPUT),
-    tools = ["@sqlite3//:sqlite3"],
+    srcs = ["part-2.sql"],
+    setup_cmd = SETUP,
+    tool_args = ["<", "$(location part-2.sql)"],
+    tool = "@sqlite3//:sqlite3",
 )
