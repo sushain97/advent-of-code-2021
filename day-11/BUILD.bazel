@@ -1,0 +1,11 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary")
+
+go_binary(
+    name = "part-1",
+    srcs = ["part-1.go"],
+)
+
+go_binary(
+    name = "part-2",
+    srcs = ["part-2.go"],
+)

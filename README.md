@@ -15,6 +15,7 @@ build toolchain.
 - Day 8: [Dart](<https://en.wikipedia.org/wiki/Dart_(programming_language)>)
 - Day 9: [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
 - Day 10: [Perl](<https://en.wikipedia.org/wiki/Perl_(programming_language)>)
+- Day 11: [Go](<https://en.wikipedia.org/wiki/Go_(programming_language)>)
 
 Languages remaining:
 
@@ -22,6 +23,5 @@ Languages remaining:
 1. C++
 1. Scala
 1. Ruby
-1. Go
 1. JavaScript
 1. AWK
