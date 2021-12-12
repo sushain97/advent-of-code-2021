@@ -93,3 +93,16 @@ load("@io_bazel_rules_go//go:deps.bzl", "go_register_toolchains", "go_rules_depe
 go_rules_dependencies()
 
 go_register_toolchains(version = "1.17.1")
+
+http_archive(
+    name = "coinbase_rules_ruby",
+    urls = ["https://github.com/coinbase/rules_ruby/archive/a4bcd8e84cc20b097c7f84a319436698894bf87e.tar.gz"],
+    strip_prefix = "rules_ruby-a4bcd8e84cc20b097c7f84a319436698894bf87e",
+    sha256 = "9a449b2cdf06873314ad9640bde7d70780083ae223fed320b03ccbc6eb639352",
+)
+
+load("@coinbase_rules_ruby//ruby:deps.bzl", "ruby_register_toolchains", "rules_ruby_dependencies")
+
+rules_ruby_dependencies()
+
+ruby_register_toolchains()
