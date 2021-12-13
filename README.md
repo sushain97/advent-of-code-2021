@@ -17,6 +17,7 @@ build toolchain.
 - Day 10: [Perl](<https://en.wikipedia.org/wiki/Perl_(programming_language)>)
 - Day 11: [Go](<https://en.wikipedia.org/wiki/Go_(programming_language)>)
 - Day 12: [Swift](<https://en.wikipedia.org/wiki/Swift_(programming_language)>)
+- Day 13: [AWK](https://en.wikipedia.org/wiki/AWK)
 
 Languages remaining:
 
@@ -24,5 +25,4 @@ Languages remaining:
 1. C++
 1. Scala
 1. JavaScript
-1. AWK
 1. Ruby

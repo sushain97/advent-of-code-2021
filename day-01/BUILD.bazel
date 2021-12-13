@@ -4,12 +4,12 @@ gen_binary(
     name = "part-1",
     tool = "@j_software//:bin/jconsole",
     srcs = ["part-1.ijs"],
-    args = ["$(location part-1.ijs)"],
+    tool_args = ["$(location part-1.ijs)"],
 )
 
 gen_binary(
     name = "part-2",
     tool = "@j_software//:bin/jconsole",
     srcs = ["part-2.ijs"],
-    args = ["$(location part-2.ijs)"],
+    tool_args = ["$(location part-2.ijs)"],
 )
