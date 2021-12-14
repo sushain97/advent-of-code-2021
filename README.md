@@ -14,7 +14,7 @@ build toolchain.
 - Day 7: [D](<https://en.wikipedia.org/wiki/D_(programming_language)>)
 - Day 8: [Dart](<https://en.wikipedia.org/wiki/Dart_(programming_language)>)
 - Day 9: [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
-- Day 10: [Perl](<https://en.wikipedia.org/wiki/Perl_(programming_language)>)
+- Day 10: [Common Lisp](https://en.wikipedia.org/wiki/Common_Lisp)
 - Day 11: [Go](<https://en.wikipedia.org/wiki/Go_(programming_language)>)
 - Day 12: [Swift](<https://en.wikipedia.org/wiki/Swift_(programming_language)>)
 - Day 13: [AWK](https://en.wikipedia.org/wiki/AWK)

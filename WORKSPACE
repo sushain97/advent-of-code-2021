@@ -120,3 +120,11 @@ swift_rules_dependencies()
 load("@build_bazel_rules_swift//swift:extras.bzl", "swift_rules_extra_dependencies")
 
 swift_rules_extra_dependencies()
+
+http_archive(
+    name = "lisp",
+    urls = ["https://prdownloads.sourceforge.net/sbcl/sbcl-1.1.6-x86-64-darwin-binary.tar.bz2"],
+    sha256 = "1ddeec53da1d9b1f8d5f33d518e2c416388e9a327492c9ebfec06c929fc1b4e7",
+    strip_prefix = "sbcl-1.1.6-x86-64-darwin",
+    build_file_content = "exports_files(['src/runtime/sbcl', 'output/sbcl.core'])",
+)

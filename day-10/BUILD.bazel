@@ -1,11 +1,15 @@
-load("@rules_perl//perl:perl.bzl", "perl_binary")
+load("//:rules.bzl", "gen_binary")
 
-perl_binary(
-    name = "part-1",
-    srcs = ["part-1.pl"]
+gen_binary(
+    name = "part-1-lisp",
+    tool = "@lisp//:src/runtime/sbcl",
+    srcs = ["part-1.lisp", "@lisp//:output/sbcl.core"],
+    tool_args = ["--core", "$(location @lisp//:output/sbcl.core)", "--script", "$(location part-1.lisp)"],
 )
 
-perl_binary(
-    name = "part-2",
-    srcs = ["part-2.pl"]
+gen_binary(
+    name = "part-2-lisp",
+    tool = "@lisp//:src/runtime/sbcl",
+    srcs = ["part-2.lisp", "@lisp//:output/sbcl.core"],
+    tool_args = ["--core", "$(location @lisp//:output/sbcl.core)", "--script", "$(location part-2.lisp)"],
 )
