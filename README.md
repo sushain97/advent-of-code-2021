@@ -22,9 +22,10 @@ build toolchain.
 
 Languages remaining:
 
-1. Rust
-1. C++
-1. Scala
-1. JavaScript
-1. Ruby
-1. Hack
+1. [Rust](http://bazelbuild.github.io/rules_rust/)
+1. [C++](https://docs.bazel.build/versions/main/be/c-cpp.html)
+1. [Scala](https://github.com/bazelbuild/rules_scala)
+1. [JavaScript](https://bazelbuild.github.io/rules_nodejs/)
+1. [Ruby](https://github.com/coinbase/rules_ruby)
+1. [Haskell](https://github.com/tweag/rules_haskell)
+1. [Kotlin](https://github.com/bazelbuild/rules_kotlin)
