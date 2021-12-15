@@ -3,7 +3,7 @@
 https://adventofcode.com/
 
 Each day's solutions are in a different language, always using Bazel as the
-build toolchain.
+build toolchain. Only the language's standard library can be used.
 
 - Day 1: [J](<https://en.wikipedia.org/wiki/J_(programming_language)>)
 - Day 2: [SQL](https://en.wikipedia.org/wiki/SQL)
