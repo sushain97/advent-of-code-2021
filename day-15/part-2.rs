@@ -1,6 +1,6 @@
 use std::cmp::Ordering;
 use std::collections::BinaryHeap;
-use std::convert::TryInto;
+use std::convert::{TryFrom, TryInto};
 use std::env;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
@@ -59,19 +59,13 @@ fn main() {
         grid.extend(extension);
     }
 
-    let mut frontier = BinaryHeap::from(
-        (0..grid[0].len())
-            .flat_map(|x| {
-                (0..grid.len()).map(move |y| Chiton {
-                    position: (x, y),
-                    risk: usize::MAX,
-                })
-            })
-            .collect::<Vec<_>>(),
-    );
+    let mut frontier = BinaryHeap::from([Chiton {
+        position: (0, 0),
+        risk: 0,
+    }]);
 
     let mut risks = (0..grid[0].len())
-        .map(|_| (0..grid.len()).map(|_| usize::MAX).collect::<Vec<_>>())
+        .map(|_| vec![usize::MAX; grid.len()])
         .collect::<Vec<_>>();
 
     let mut current = Chiton {
@@ -84,18 +78,16 @@ fn main() {
         let x: isize = current.position.0.try_into().unwrap();
         let y: isize = current.position.1.try_into().unwrap();
 
-        let neighbors = [(x, y - 1), (x, y + 1), (x - 1, y), (x + 1, y)]
+        for (nx, ny) in [(x, y - 1), (x, y + 1), (x - 1, y), (x + 1, y)]
             .iter()
-            .filter(|&(x, y)| {
+            .filter(|(x, y)| {
                 *x >= 0
                     && *x < grid[0].len().try_into().unwrap()
                     && *y >= 0
                     && *y < grid.len().try_into().unwrap()
             })
-            .map(|&(x, y)| (x.try_into().unwrap(), y.try_into().unwrap()))
-            .collect::<Vec<(usize, usize)>>();
-
-        for (nx, ny) in neighbors {
+            .map(|(x, y)| (usize::try_from(*x).unwrap(), usize::try_from(*y).unwrap()))
+        {
             let neighbor_distance = current.risk + grid[ny][nx];
             if neighbor_distance < risks[ny][nx] {
                 frontier.push(Chiton {
