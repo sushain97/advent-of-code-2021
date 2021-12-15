@@ -3,7 +3,7 @@
 https://adventofcode.com/
 
 Each day's solutions are in a different language, always using Bazel as the
-build toolchain. Only the language's standard library can be used.
+build toolchain. Only the language's standard library is used.
 
 - Day 1: [J](<https://en.wikipedia.org/wiki/J_(programming_language)>)
 - Day 2: [SQL](https://en.wikipedia.org/wiki/SQL)
@@ -19,10 +19,10 @@ build toolchain. Only the language's standard library can be used.
 - Day 12: [Swift](<https://en.wikipedia.org/wiki/Swift_(programming_language)>)
 - Day 13: [AWK](https://en.wikipedia.org/wiki/AWK)
 - Day 14: [Perl](<https://en.wikipedia.org/wiki/Perl_(programming_language)>)
+- Day 15: [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>)
 
 Languages remaining:
 
-1. [Rust](http://bazelbuild.github.io/rules_rust/)
 1. [C++](https://docs.bazel.build/versions/main/be/c-cpp.html)
 1. [Scala](https://github.com/bazelbuild/rules_scala)
 1. [JavaScript](https://bazelbuild.github.io/rules_nodejs/)

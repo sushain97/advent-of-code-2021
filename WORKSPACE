@@ -128,3 +128,16 @@ http_archive(
     strip_prefix = "sbcl-1.1.6-x86-64-darwin",
     build_file_content = "exports_files(['src/runtime/sbcl', 'output/sbcl.core'])",
 )
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "rules_rust",
+    sha256 = "29650f658fa49d797e068f5d3a3254efa714ad172c626be1e815035500231e55",
+    strip_prefix = "rules_rust-5a79d72fbdd44980dfa424607dd646d8303d6fc1",
+    urls = ["https://github.com/bazelbuild/rules_rust/archive/5a79d72fbdd44980dfa424607dd646d8303d6fc1.tar.gz"],
+)
+
+load("@rules_rust//rust:repositories.bzl", "rust_repositories")
+
+rust_repositories()
