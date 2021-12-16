@@ -20,12 +20,12 @@ build toolchain. Only the language's standard library is used.
 - Day 13: [AWK](https://en.wikipedia.org/wiki/AWK)
 - Day 14: [Perl](<https://en.wikipedia.org/wiki/Perl_(programming_language)>)
 - Day 15: [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>)
+- Day 16: [Ruby](<https://en.wikipedia.org/wiki/Ruby_(programming_language)>)
 
 Languages remaining:
 
 1. [C++](https://docs.bazel.build/versions/main/be/c-cpp.html)
 1. [Scala](https://github.com/bazelbuild/rules_scala)
 1. [JavaScript](https://bazelbuild.github.io/rules_nodejs/)
-1. [Ruby](https://github.com/coinbase/rules_ruby)
 1. [Haskell](https://github.com/tweag/rules_haskell)
 1. [Kotlin](https://github.com/bazelbuild/rules_kotlin)
