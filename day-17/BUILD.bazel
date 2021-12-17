@@ -1,0 +1,13 @@
+load("@io_bazel_rules_kotlin//kotlin:jvm.bzl", "kt_jvm_binary")
+
+kt_jvm_binary(
+    name = "part-1",
+    srcs = ["part-1.kt"],
+    main_class = "main.Part1",
+)
+
+kt_jvm_binary(
+    name = "part-2",
+    srcs = ["part-2.kt"],
+    main_class = "main.Part2",
+)
