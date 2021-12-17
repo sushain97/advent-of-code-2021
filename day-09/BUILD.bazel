@@ -1,9 +1,41 @@
-py_binary(
-    name = "part-1",
-    srcs = ["part-1.py"],
+load("@rules_foreign_cc//foreign_cc:defs.bzl", "configure_make")
+
+configure_make(
+    name = "php-build",
+    lib_source = "@php_src//:all",
+    configure_options = [
+        "--with-iconv=/usr/local/opt/libiconv",
+        "CFLAGS='-Dredacted=\"redacted\"'",
+    ],
+    out_binaries = ["php"],
 )
 
-py_binary(
+filegroup(
+    name = "php-bin",
+    srcs = [":php-build"],
+    output_group = "php",
+)
+
+genrule(
+    name = "php-binary",
+    srcs = [":php-bin"],
+    outs = ["php"],
+    cmd = "cp $< $@",
+    executable = True,
+)
+
+load("//:rules.bzl", "gen_binary")
+
+gen_binary(
+    name = "part-1",
+    srcs = ["part-1.php"],
+    tool_args = ["$(location part-1.php)"],
+    tool = "//day-09:php",
+)
+
+gen_binary(
     name = "part-2",
-    srcs = ["part-2.py"],
+    srcs = ["part-2.php"],
+    tool_args = ["$(location part-2.php)"],
+    tool = "//day-09:php",
 )

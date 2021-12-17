@@ -141,3 +141,21 @@ http_archive(
 load("@rules_rust//rust:repositories.bzl", "rust_repositories")
 
 rust_repositories()
+
+http_archive(
+    name = "rules_foreign_cc",
+    strip_prefix = "rules_foreign_cc-605a80355dae9e1855634b733b98a5d97a92f385",
+    url = "https://github.com/bazelbuild/rules_foreign_cc/archive/605a80355dae9e1855634b733b98a5d97a92f385.tar.gz",
+)
+
+load("@rules_foreign_cc//foreign_cc:repositories.bzl", "rules_foreign_cc_dependencies")
+
+rules_foreign_cc_dependencies()
+
+http_archive(
+    name = "php_src",
+    build_file_content = "filegroup(name = 'all', srcs = glob(['**']), visibility = ['//visibility:public'])",
+    sha256 = "848705043ea4a6e022246ae12a1bff6afcf5c73ea98c6ac4d2108d6028c5c125",
+    strip_prefix = "php-8.1.0",
+    urls = ["https://www.php.net/distributions/php-8.1.0.tar.gz"],
+)

@@ -13,7 +13,7 @@ build toolchain. Only the language's standard library is used.
 - Day 6: [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>)
 - Day 7: [D](<https://en.wikipedia.org/wiki/D_(programming_language)>)
 - Day 8: [Dart](<https://en.wikipedia.org/wiki/Dart_(programming_language)>)
-- Day 9: [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
+- Day 9: [PHP](https://en.wikipedia.org/wiki/PHP)
 - Day 10: [Common Lisp](https://en.wikipedia.org/wiki/Common_Lisp)
 - Day 11: [Go](<https://en.wikipedia.org/wiki/Go_(programming_language)>)
 - Day 12: [Swift](<https://en.wikipedia.org/wiki/Swift_(programming_language)>)
@@ -29,3 +29,4 @@ Languages remaining:
 1. [JavaScript](https://bazelbuild.github.io/rules_nodejs/)
 1. [Haskell](https://github.com/tweag/rules_haskell)
 1. [Kotlin](https://github.com/bazelbuild/rules_kotlin)
+1. [Python](https://docs.bazel.build/versions/main/be/python.html)
