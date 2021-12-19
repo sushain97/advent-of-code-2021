@@ -1,0 +1,38 @@
+%!PS
+
+/input_file (input) (r) file def
+
+/num_string 2 string def
+/timers [0 0 0 0 0 0 0 0 0] def
+
+{
+  input_file num_string readstring
+  {
+    0 1 getinterval cvi
+    /timer exch def
+
+    timers timer timers timer get 1 add put
+  } { exit } ifelse
+} loop
+
+256 {
+  /timers [
+    timers 1 get
+    timers 2 get
+    timers 3 get
+    timers 4 get
+    timers 5 get
+    timers 6 get
+    timers 7 get timers 0 get add
+    timers 8 get
+    timers 0 get
+  ] def
+} repeat
+
+/fish 0 def
+timers {
+  fish add /fish exch def
+} forall
+fish =
+
+quit

@@ -30,12 +30,12 @@ gen_binary(
     name = "part-1",
     srcs = ["part-1.php"],
     tool_args = ["$(location part-1.php)"],
-    tool = "//day-09:php",
+    tool = ":php",
 )
 
 gen_binary(
     name = "part-2",
     srcs = ["part-2.php"],
     tool_args = ["$(location part-2.php)"],
-    tool = "//day-09:php",
+    tool = ":php",
 )

@@ -173,3 +173,11 @@ kotlin_repositories()
 load("@io_bazel_rules_kotlin//kotlin:core.bzl", "kt_register_toolchains")
 
 kt_register_toolchains()
+
+http_archive(
+    name = "ghostscript_src",
+    urls = ["https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs9550/ghostscript-9.55.0.tar.gz"],
+    build_file_content = "filegroup(name = 'all', srcs = glob(['**']), visibility = ['//visibility:public'])",
+    sha256 = "31e2064be67e15b478a8da007d96d6cd4d2bee253e5be220703a225f7f79a70b",
+    strip_prefix = "ghostscript-9.55.0",
+)

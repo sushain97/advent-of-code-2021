@@ -1,9 +1,47 @@
-sh_binary(
-    name = "part-1",
-    srcs = ["part-1.sh"],
+load("@rules_foreign_cc//foreign_cc:defs.bzl", "configure_make")
+
+configure_make(
+    name = "ghostscript-build",
+    lib_source = "@ghostscript_src//:all",
+    configure_options = [
+        "--without-libtiff",
+        "--without-tesseract",
+        "--disable-fontconfig",
+        "--disable-gtk",
+    ],
+    out_binaries = ["gs"],
 )
 
-sh_binary(
+filegroup(
+    name = "ghostscript-bin",
+    srcs = [":ghostscript-build"],
+    output_group = "gs",
+)
+
+genrule(
+    name = "ghostscript-binary",
+    srcs = [":ghostscript-bin"],
+    outs = ["gs"],
+    cmd = "cp $< $@",
+    executable = True,
+)
+
+load("//:rules.bzl", "gen_binary")
+
+SETUP = 'cp "${@: -1}" input; set -- "${@:1:$(($#-1))}"'
+
+gen_binary(
+    name = "part-1",
+    srcs = ["part-1.ps"],
+    setup_cmd = SETUP,
+    tool_args = ["-q", "-dNOSAFER", "$(location part-1.ps)"],
+    tool = ":gs",
+)
+
+gen_binary(
     name = "part-2",
-    srcs = ["part-2.sh"],
+    srcs = ["part-2.ps"],
+    setup_cmd = SETUP,
+    tool_args = ["-q", "-dNOSAFER", "$(location part-2.ps)"],
+    tool = ":gs",
 )

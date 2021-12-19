@@ -10,7 +10,7 @@ build toolchain. Only the language's standard library is used.
 - Day 3: [F#](<https://en.wikipedia.org/wiki/FSharp_(programming_language)>)
 - Day 4: [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>)
 - Day 5: [C](<https://en.wikipedia.org/wiki/C_(programming_language)>)
-- Day 6: [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>)
+- Day 6: [PostScript](https://en.wikipedia.org/wiki/PostScript)
 - Day 7: [D](<https://en.wikipedia.org/wiki/D_(programming_language)>)
 - Day 8: [Dart](<https://en.wikipedia.org/wiki/Dart_(programming_language)>)
 - Day 9: [PHP](https://en.wikipedia.org/wiki/PHP)
@@ -32,6 +32,7 @@ Language ideas:
 1. [Haskell](https://github.com/tweag/rules_haskell)
 1. [C#](https://github.com/bazelbuild/rules_dotnet)
 1. Lua
-1. PostScript
+1. Bash
 1. COBOL
 1. Fortran
+1. Erlang
