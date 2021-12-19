@@ -22,13 +22,13 @@ build toolchain. Only the language's standard library is used.
 - Day 15: [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>)
 - Day 16: [Ruby](<https://en.wikipedia.org/wiki/Ruby_(programming_language)>)
 - Day 17: [Kotlin](<https://en.wikipedia.org/wiki/Kotlin_(programming_language)>)
-- Day 18: [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
+- Day 18: [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 Language ideas:
 
 1. [C++](https://docs.bazel.build/versions/main/be/c-cpp.html)
 1. [Scala](https://github.com/bazelbuild/rules_scala)
-1. [JavaScript](https://bazelbuild.github.io/rules_nodejs/)
+1. [Python](https://docs.bazel.build/versions/main/be/python.html)
 1. [Haskell](https://github.com/tweag/rules_haskell)
 1. [C#](https://github.com/bazelbuild/rules_dotnet)
 1. Lua
