@@ -4,7 +4,7 @@ configure_make(
     name = "php-build",
     lib_source = "@php_src//:all",
     configure_options = [
-        "--with-iconv=/usr/local/opt/libiconv",
+        "--without-iconv",
         "CFLAGS='-Dredacted=\"redacted\"'",
     ],
     out_binaries = ["php"],
