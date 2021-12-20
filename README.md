@@ -20,19 +20,19 @@ build toolchain. Only the language's standard library is used.
 - Day 13: [AWK](https://en.wikipedia.org/wiki/AWK)
 - Day 14: [Perl](<https://en.wikipedia.org/wiki/Perl_(programming_language)>)
 - Day 15: [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>)
-- Day 16: [Ruby](<https://en.wikipedia.org/wiki/Ruby_(programming_language)>)
+- Day 16: [Scala](<https://en.wikipedia.org/wiki/Scala_(programming_language)>)
 - Day 17: [Kotlin](<https://en.wikipedia.org/wiki/Kotlin_(programming_language)>)
 - Day 18: [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - Day 19: [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
 
 Language ideas:
 
-1. [C++](https://docs.bazel.build/versions/main/be/c-cpp.html)
-1. [Scala](https://github.com/bazelbuild/rules_scala)
-1. [Haskell](https://github.com/tweag/rules_haskell)
-1. [C#](https://github.com/bazelbuild/rules_dotnet)
+1. [Ruby](https://github.com/coinbase/rules_ruby)
 1. Lua
 1. Bash
+1. [C++](https://docs.bazel.build/versions/main/be/c-cpp.html)
+1. [Haskell](https://github.com/tweag/rules_haskell)
+1. [C#](https://github.com/bazelbuild/rules_dotnet)
 1. COBOL
 1. Fortran
 1. Erlang

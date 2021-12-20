@@ -1,11 +1,13 @@
-load("@coinbase_rules_ruby//ruby:defs.bzl", "rb_binary")
+load("@io_bazel_rules_scala//scala:scala.bzl", "scala_binary")
 
-rb_binary(
+scala_binary(
     name = "part-1",
-    srcs = ["part-1.rb"],
+    srcs = ["part-1.scala"],
+    main_class = "Part1",
 )
 
-rb_binary(
+scala_binary(
     name = "part-2",
-    srcs = ["part-2.rb"],
+    srcs = ["part-2.scala"],
+    main_class = "Part2",
 )

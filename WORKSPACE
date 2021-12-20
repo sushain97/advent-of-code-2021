@@ -181,3 +181,22 @@ http_archive(
     sha256 = "31e2064be67e15b478a8da007d96d6cd4d2bee253e5be220703a225f7f79a70b",
     strip_prefix = "ghostscript-9.55.0",
 )
+
+http_archive(
+    name = "io_bazel_rules_scala",
+    sha256 = "19d37e639b20abd36ed63d45659d760a5ad784e13b305bc4f387f00b725be250",
+    strip_prefix = "rules_scala-5ab2eda264739d4687fbc7935f424def0f3fafd7",
+    url = "https://github.com/bazelbuild/rules_scala/archive/5ab2eda264739d4687fbc7935f424def0f3fafd7.zip",
+)
+
+load("@io_bazel_rules_scala//:scala_config.bzl", "scala_config")
+
+scala_config()
+
+load("@io_bazel_rules_scala//scala:scala.bzl", "scala_repositories")
+
+scala_repositories()
+
+load("@io_bazel_rules_scala//scala:toolchains.bzl", "scala_register_toolchains")
+
+scala_register_toolchains()
