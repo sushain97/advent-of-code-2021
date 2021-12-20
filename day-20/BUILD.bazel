@@ -1,0 +1,15 @@
+load("//:rules.bzl", "gen_binary")
+
+gen_binary(
+    name = "part-1",
+    tool = "@lua//:lua",
+    srcs = ["part-1.lua"],
+    tool_args = ["$(location part-1.lua)"],
+)
+
+gen_binary(
+    name = "part-2",
+    tool = "@lua//:lua",
+    srcs = ["part-2.lua"],
+    tool_args = ["$(location part-2.lua)"],
+)

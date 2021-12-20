@@ -24,11 +24,11 @@ build toolchain. Only the language's standard library is used.
 - Day 17: [Kotlin](<https://en.wikipedia.org/wiki/Kotlin_(programming_language)>)
 - Day 18: [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - Day 19: [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
+- Day 20: [Lua](<https://en.wikipedia.org/wiki/Lua_(programming_language)>)
 
 Language ideas:
 
 1. [Ruby](https://github.com/coinbase/rules_ruby)
-1. Lua
 1. Bash
 1. [C++](https://docs.bazel.build/versions/main/be/c-cpp.html)
 1. [Haskell](https://github.com/tweag/rules_haskell)
@@ -36,3 +36,4 @@ Language ideas:
 1. COBOL
 1. Fortran
 1. Erlang
+1. Julia

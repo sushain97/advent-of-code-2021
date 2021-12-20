@@ -2,3 +2,4 @@ build --cxxopt='-std=c++20'
 build --host_platform @io_bazel_rules_dotnet//dotnet/toolchain:darwin_amd64_5.0.201
 build --platforms @io_bazel_rules_dotnet//dotnet/toolchain:darwin_amd64_5.0.201
 build -c opt
+build --action_env BAZEL_USE_CPP_ONLY_TOOLCHAIN=1

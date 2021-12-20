@@ -186,7 +186,7 @@ http_archive(
     name = "io_bazel_rules_scala",
     sha256 = "19d37e639b20abd36ed63d45659d760a5ad784e13b305bc4f387f00b725be250",
     strip_prefix = "rules_scala-5ab2eda264739d4687fbc7935f424def0f3fafd7",
-    url = "https://github.com/bazelbuild/rules_scala/archive/5ab2eda264739d4687fbc7935f424def0f3fafd7.zip",
+    urls = ["https://github.com/bazelbuild/rules_scala/archive/5ab2eda264739d4687fbc7935f424def0f3fafd7.zip"],
 )
 
 load("@io_bazel_rules_scala//:scala_config.bzl", "scala_config")
@@ -200,3 +200,33 @@ scala_repositories()
 load("@io_bazel_rules_scala//scala:toolchains.bzl", "scala_register_toolchains")
 
 scala_register_toolchains()
+
+http_archive(
+    name = "cobol_src",
+    urls = ["https://sourceforge.net/projects/gnucobol/files/gnucobol/3.1/gnucobol-3.1.2.tar.xz"],
+    build_file_content = "filegroup(name = 'all', srcs = glob(['**']), visibility = ['//visibility:public'])",
+    sha256 = "597005d71fd7d65b90cbe42bbfecd5a9ec0445388639404662e70d53ddf22574",
+    strip_prefix = "gnucobol-3.1.2",
+)
+
+http_archive(
+    name = "rules_haskell",
+    urls = ["https://github.com/tweag/rules_haskell/archive/0c31ab717cf82c1ebcba275b6adf68244e47fe74.tar.gz"],
+    sha256 = "7d5002f5fc9211d6ce0bfc610bcdc80d4661117f21979e2eed18883089810171",
+    strip_prefix = "rules_haskell-0c31ab717cf82c1ebcba275b6adf68244e47fe74",
+)
+
+load("@rules_haskell//haskell:repositories.bzl", "rules_haskell_dependencies")
+
+rules_haskell_dependencies()
+
+load("@rules_haskell//haskell:toolchain.bzl", "rules_haskell_toolchains")
+
+rules_haskell_toolchains()
+
+http_archive(
+    name = "lua",
+    urls = ["https://downloads.sourceforge.net/project/luabinaries/5.2.4/Tools%20Executables/lua-5.2.4_MacOS1011_bin.tar.gz"],
+    sha256 = "0da72cf3418667ca8eada3b450b9a1fb349d4eac916cab2ec39339b4032e2fce",
+    build_file_content = "alias(name = 'lua', actual = 'lua52', visibility = ['//visibility:public'])",
+)
