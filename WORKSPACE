@@ -146,6 +146,7 @@ http_archive(
     name = "rules_foreign_cc",
     strip_prefix = "rules_foreign_cc-605a80355dae9e1855634b733b98a5d97a92f385",
     url = "https://github.com/bazelbuild/rules_foreign_cc/archive/605a80355dae9e1855634b733b98a5d97a92f385.tar.gz",
+    sha256 = "08b2d21ea7a52fbc2faf202dba8e260b503785975903f183c56e7118876fdf62",
 )
 
 load("@rules_foreign_cc//foreign_cc:repositories.bzl", "rules_foreign_cc_dependencies")
@@ -200,14 +201,6 @@ scala_repositories()
 load("@io_bazel_rules_scala//scala:toolchains.bzl", "scala_register_toolchains")
 
 scala_register_toolchains()
-
-http_archive(
-    name = "cobol_src",
-    urls = ["https://sourceforge.net/projects/gnucobol/files/gnucobol/3.1/gnucobol-3.1.2.tar.xz"],
-    build_file_content = "filegroup(name = 'all', srcs = glob(['**']), visibility = ['//visibility:public'])",
-    sha256 = "597005d71fd7d65b90cbe42bbfecd5a9ec0445388639404662e70d53ddf22574",
-    strip_prefix = "gnucobol-3.1.2",
-)
 
 http_archive(
     name = "rules_haskell",
