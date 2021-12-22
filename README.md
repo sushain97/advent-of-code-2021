@@ -26,12 +26,12 @@ build toolchain. Only the language's standard library is used.
 - Day 19: [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
 - Day 20: [Lua](<https://en.wikipedia.org/wiki/Lua_(programming_language)>)
 - Day 21: [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>)
+- Day 22: [Haskell](<https://en.wikipedia.org/wiki/Haskell_(programming_language)>)
 
 Language ideas:
 
 1. [Ruby](https://github.com/coinbase/rules_ruby)
 1. [C++](https://docs.bazel.build/versions/main/be/c-cpp.html)
-1. [Haskell](https://github.com/tweag/rules_haskell)
 1. [C#](https://github.com/bazelbuild/rules_dotnet)
 1. COBOL
 1. Fortran
