@@ -1,0 +1,11 @@
+load("@coinbase_rules_ruby//ruby:defs.bzl", "rb_binary")
+
+rb_binary(
+    name = "part-1",
+    srcs = ["part-1.rb"],
+)
+
+rb_binary(
+    name = "part-2",
+    srcs = ["part-2.rb"],
+)
