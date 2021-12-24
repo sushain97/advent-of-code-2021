@@ -29,9 +29,9 @@ end
 default = '0'
 for _ = 1, 2 do
     local enhanced_image = {}
+    local new_default = mapping[tonumber(string.rep(default, 9), 2)]
     set_default(enhanced_image, new_default)
     set_default(image, default)
-    local new_default = mapping[tonumber(string.rep(default, 9), 2)]
 
     x_min, x_max, y_min, y_max = 0, 0, 0, 0
     for index in pairs(image) do
