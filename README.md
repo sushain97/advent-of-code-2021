@@ -28,11 +28,11 @@ build toolchain. Only the language's standard library is used.
 - Day 21: [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>)
 - Day 22: [Haskell](<https://en.wikipedia.org/wiki/Haskell_(programming_language)>)
 - Day 23: [Ruby](<https://en.wikipedia.org/wiki/Ruby_(programming_language)>)
+- Day 24: [C#](https://en.wikipedia.org/wiki/C_Sharp)
 
 Language ideas:
 
 1. [C++](https://docs.bazel.build/versions/main/be/c-cpp.html)
-1. [C#](https://github.com/bazelbuild/rules_dotnet)
 1. COBOL
 1. Fortran
 1. Erlang
