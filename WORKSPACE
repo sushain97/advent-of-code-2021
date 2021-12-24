@@ -223,3 +223,23 @@ http_archive(
     sha256 = "0da72cf3418667ca8eada3b450b9a1fb349d4eac916cab2ec39339b4032e2fce",
     build_file_content = "alias(name = 'lua', actual = 'lua52', visibility = ['//visibility:public'])",
 )
+
+
+# breaker
+
+
+http_archive(
+    name = "cobol_src",
+    urls = ["https://sourceforge.net/projects/gnucobol/files/gnucobol/3.1/gnucobol-3.1.2.tar.xz"],
+    build_file_content = "filegroup(name = 'all', srcs = glob(['**']), visibility = ['//visibility:public'])",
+    sha256 = "597005d71fd7d65b90cbe42bbfecd5a9ec0445388639404662e70d53ddf22574",
+    strip_prefix = "gnucobol-3.1.2",
+)
+
+http_archive(
+    name = "erlang_src",
+    urls = ["https://github.com/erlang/otp/releases/download/OTP-24.2/otp_src_24.2.tar.gz"],
+    sha256 = "af0f1928dcd16cd5746feeca8325811865578bf1a110a443d353ea3e509e6d41",
+    build_file_content = "filegroup(name = 'all', srcs = glob(['**']), visibility = ['//visibility:public'])",
+    strip_prefix = "otp_src_24.2",
+)

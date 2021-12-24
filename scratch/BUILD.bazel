@@ -1,0 +1,30 @@
+load("@rules_foreign_cc//foreign_cc:defs.bzl", "configure_make")
+
+configure_make(
+    name = "erlang-build",
+    lib_source = "@erlang_src//:all",
+    out_binaries = ["erlang"],
+)
+
+configure_make(
+    name = "cobol-build",
+    lib_source = "@cobol_src//:all",
+    out_binaries = ["cobol"],
+)
+
+load("@rules_haskell//haskell:defs.bzl", "haskell_binary", "haskell_toolchain_library")
+
+haskell_toolchain_library(name = "base")
+haskell_toolchain_library(name = "containers")
+haskell_toolchain_library(name = "text")
+
+haskell_binary(
+    name = "part1",
+    srcs = ["Part1.hs"],
+    deps = [":base", ":containers", ":text"],
+)
+
+alias(
+    name = "part-1",
+    actual = ":part1",
+)
