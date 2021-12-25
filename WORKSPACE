@@ -38,7 +38,14 @@ http_archive(
     urls = ["https://www.sqlite.org/2021/sqlite-amalgamation-3370000.zip"],
     sha256 = "a443aaf5cf345613492efa679ef1c9cc31ba109dcdf37ee377f61ab500d042fe",
     strip_prefix = "sqlite-amalgamation-3370000",
-    build_file_content = "cc_binary(name = 'sqlite3', srcs = ['shell.c', 'sqlite3.c', 'sqlite3.h'], visibility = ['//visibility:public'])",
+    build_file_content = """
+        cc_binary(
+            name = 'sqlite3',
+            srcs = ['shell.c', 'sqlite3.c', 'sqlite3.h'],
+            linkopts = ['-ldl', '-lpthread'],
+            visibility = ['//visibility:public'],
+        )
+    """.strip(),
 )
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
@@ -54,8 +61,15 @@ load("@rules_d//d:d.bzl", "DMD_BUILD_FILE")
 
 http_archive(
     name = "dmd_darwin_x86_64",
-    urls = ["https://downloads.dlang.org/releases/2021/dmd.2.098.0.osx.tar.xz"],
+    urls = ["http://downloads.dlang.org/releases/2021/dmd.2.098.0.osx.tar.xz"],
     sha256 = "7780aad4429d499a647e7e907706f775656be77f4425c8b4aeab798024c7f342",
+    build_file_content = DMD_BUILD_FILE,
+)
+
+http_archive(
+    name = "dmd_linux_x86_64",
+    urls = ["http://downloads.dlang.org/releases/2021/dmd.2.098.0.linux.tar.xz"],
+    sha256 = "1104e5e59fd47828b798d77a72be547bf086bba1d374a1855c6b5814c4db0145",
     build_file_content = DMD_BUILD_FILE,
 )
 

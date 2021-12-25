@@ -5,6 +5,8 @@ configure_make(
     lib_source = "@php_src//:all",
     configure_options = [
         "--without-iconv",
+        "--without-pdo-sqlite",
+        "--without-sqlite3",
         "CFLAGS='-Dredacted=\"redacted\"'",
     ],
     out_binaries = ["php"],
