@@ -1,0 +1,12 @@
+genrule(
+    name = "part-1",
+    outs = ["part-1-out"],
+    cmd = """
+        tar xf $(location @gcc-libs//file)
+        export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu LD_LIBRARY_PATH=lib64
+        $(location @gfortran//:gfortran) $< -o $@
+    """,
+    srcs = ["part-1.f90"],
+    tools = ["@gfortran//:gfortran", "@gcc-libs//file"],
+    executable = True,
+)

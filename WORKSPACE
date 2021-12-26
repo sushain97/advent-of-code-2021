@@ -1,4 +1,4 @@
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file")
 
 http_archive(
     name = "rules_perl",
@@ -236,4 +236,18 @@ http_archive(
     urls = ["https://downloads.sourceforge.net/project/luabinaries/5.2.4/Tools%20Executables/lua-5.2.4_MacOS1011_bin.tar.gz"],
     sha256 = "0da72cf3418667ca8eada3b450b9a1fb349d4eac916cab2ec39339b4032e2fce",
     build_file_content = "alias(name = 'lua', actual = 'lua52', visibility = ['//visibility:public'])",
+)
+
+http_archive(
+    name = "gfortran",
+    urls = ["https://gfortran.meteodat.ch/download/x86_64/releases/gcc-11.1.0.tar.xz"],
+    sha256 = "1e1e8e9a1b0287c4e5df4a520c51e5a04f6123912ebaa6603e3db03c72534e13",
+    strip_prefix = "gcc-11.1.0",
+    build_file_content = "alias(name = 'gfortran', actual = 'bin/gfortran', visibility = ['//visibility:public'])",
+)
+
+http_file(
+    name = "gcc-libs",
+    urls = ["https://gfortran.meteodat.ch/download/x86_64/gcc-infrastructure.tar.xz"],
+    sha256 = "bc4bb9931d0d94de70de3488183a76178e2d3a3447cd1f4fbbd5539223034693",
 )
