@@ -48,8 +48,6 @@ http_archive(
     """.strip(),
 )
 
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-
 http_archive(
     name = "rules_d",
     urls = ["https://github.com/bazelbuild/rules_d/archive/bcf137e3c9381545ce54715632bc1d31c51ee4da.tar.gz"],
@@ -142,8 +140,6 @@ http_archive(
     strip_prefix = "sbcl-1.1.6-x86-64-darwin",
     build_file_content = "exports_files(['src/runtime/sbcl', 'output/sbcl.core'])",
 )
-
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "rules_rust",
